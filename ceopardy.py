@@ -315,4 +315,4 @@ if __name__ == '__main__':
 
     # WARNING: This app is not ready to be exposed on the network.
     #          Game host interface would be exposed.
-    socketio.run(app, host="127.0.0.1", debug=True)
+    socketio.run(app, host="0.0.0.0", debug=True)

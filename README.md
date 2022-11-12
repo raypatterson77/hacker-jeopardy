@@ -1,7 +1,6 @@
-# hacker-jeopardy
+# hacker-jeopardy docker
 
-This is a permanent-fork from [https://github.com/obilodeau/ceopardy](https://github.com/obilodeau/ceopardy).     
-It was a fantastic start but I felt I'd like to iterate on it
+A fork from [https://github.com/bsidesvi/hacker-jeopardy](https://github.com/bsidesvi/hacker-jeopardy) that runs the game inside a docker container.     
 
 ## Adding your questions
 
@@ -11,11 +10,11 @@ Check `data/` for an example.
 
 ## Running  
 
+After adding your Questions build and run the docker container:
+
 ```
-virtualenv env
-source env/bin/activate
-pip install -r requirements.txt
-./ceopardy.py
+docker image build -t hacker_jeopardy .
+docker run -p 5000:5000 hacker_jeopardy
 ```
 
 Then open [localhost:5000/host](http://localhost:5000/host) and setup the game.    
